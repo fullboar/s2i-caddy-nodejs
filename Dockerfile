@@ -13,10 +13,8 @@ LABEL io.k8s.description="Platform for building Caddy images" \
      io.openshift.expose-services="8080:http" \
      io.openshift.tags="builder,${BUILDER_VERSION},caddy"
 
-# TODO: Install required packages here:
-# RUN yum install -y ... && yum clean all -y
-# RUN yum install -y rubygems && yum clean all -y
-# RUN gem install asdf
+RUN yum install -y python && \
+    yum clean all -y
 
 RUN curl https://github.com/caddyserver/caddy/releases/download/v${CADDY_VERSION}/caddy_${CADDY_VERSION}_linux_amd64.tar.gz \
     -SL --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" | \
