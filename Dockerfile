@@ -13,7 +13,7 @@ LABEL io.k8s.description="Platform for building Caddy images" \
      io.openshift.expose-services="8080:http" \
      io.openshift.tags="builder,${BUILDER_VERSION},caddy"
 
-RUN yum install -y python && \
+RUN yum install -y python3 && \
     yum clean all -y
 
 RUN curl https://github.com/caddyserver/caddy/releases/download/v${CADDY_VERSION}/caddy_${CADDY_VERSION}_linux_amd64.tar.gz \
