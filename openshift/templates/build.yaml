@@ -46,7 +46,7 @@ parameters:
     The URL to your GIT repo, you can use this as the default value
     without issue; in may be prefered in many cases.
   required: true
-  value: https://github.com/bcgov/s2i-caddy-nodejs.git
+  value: https://github.com/fullboar/s2i-caddy-nodejs.git
 - name: GIT_REF
   displayName: Git Reference
   description: The git reference or branch.
